@@ -10,10 +10,15 @@ def func(x1, x2):
 x = [5, 7, 5]
 y = [4, 6, 6]
 
-print("1 iteration.")
+print("Ітерація 1.")
 print("1 | 2 | 3")
 for el in zip(x, y):
-    print(f"f{el} = {func(*el)}")
+    if el == min(zip(x, y), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    l")
+    elif el == max(zip(x, y), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    h")
+    else:
+        print(f"f{el} = {func(*el)}    -    g")
 
 # x_2 max
 
@@ -49,9 +54,14 @@ print("_" * 50)
 x2 = [5, 3, 5]
 y2 = [4, 4, 6]
 
-print("2 iteration.")
+print("Ітерація 2.")
 for el in zip(x2, y2):
-    print(f"f{el} = {func(*el)}")
+    if el == min(zip(x2, y2), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    l")
+    elif el == max(zip(x2, y2), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    h")
+    else:
+        print(f"f{el} = {func(*el)}    -    g")
 
 # x_3 max
 
@@ -85,9 +95,14 @@ y3 = [4, 4, 2]
 
 x3_array = np.array(list(zip(x3, y3)))
 
-print("3 iteration. Reduction")
+print("Ітерація 3. Редукція")
 for el in zip(x3, y3):
-    print(f"f{el} = {func(*el)}")
+    if el == min(zip(x3, y3), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    l")
+    elif el == max(zip(x3, y3), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    h")
+    else:
+        print(f"f{el} = {func(*el)}    -    g")
 
 # # reduction related to (3, 4) - 2
 
@@ -114,7 +129,12 @@ y4 = [4, 4, 3]
 x4_array = np.array(list(zip(x4, y4)))
 
 for el in zip(x4, y4):
-    print(f"f{el} = {func(*el)}")
+    if el == min(zip(x4, y4), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    l")
+    elif el == max(zip(x4, y4), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    h")
+    else:
+        print(f"f{el} = {func(*el)}    -    g")
 
 x_mean = (x4_array[2] + x4_array[1]) / 2
 
@@ -149,7 +169,12 @@ y5 = [3, 4, 3]
 x5_array = np.array(list(zip(x5, y5)))
 
 for el in zip(x5, y5):
-    print(f"f{el} = {func(*el)}")
+    if el == min(zip(x5, y5), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    l")
+    elif el == max(zip(x5, y5), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    h")
+    else:
+        print(f"f{el} = {func(*el)}    -    g")
 
 x_mean = (x5_array[0] + x5_array[1]) / 2
 x_new = 2 * x_mean - x5_array[2]
@@ -183,7 +208,12 @@ y6 = [3, 4, 4]
 x6_array = np.array(list(zip(x6, y6)))
 
 for el in zip(x6, y6):
-    print(f"f{el} = {func(*el)}")
+    if el == min(zip(x6, y6), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    l")
+    elif el == max(zip(x6, y6), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    h")
+    else:
+        print(f"f{el} = {func(*el)}    -    g")
 
 # reduction
 x_10 = (x_9 + x_4) / 2
@@ -209,7 +239,12 @@ x7 = [2, 2.5, 2]
 y7 = [3.5, 4, 4]
 
 for el in zip(x7, y7):
-    print(f"f{el} = {func(*el)}")
+    if el == min(zip(x7, y7), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    l")
+    elif el == max(zip(x7, y7), key=lambda x: func(x[0], x[1])):
+        print(f"f{el} = {func(*el)}    -    h")
+    else:
+        print(f"f{el} = {func(*el)}    -    g")
 
 x7_array = np.array(list(zip(x7, y7)))
 
