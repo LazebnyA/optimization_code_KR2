@@ -37,6 +37,7 @@ x_4 = (
 
 print(f"Відображення гамма = 2: x_4 = {x_4}")
 print(f"f{x_4} = {func(*x_4)}")
+print(f"Залишимо x_4 = {tuple(x_new)}")
 
 x_4 = x_new
 
